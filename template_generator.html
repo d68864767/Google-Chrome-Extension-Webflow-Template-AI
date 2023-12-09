@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webflow Template Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="template-container">
+        <!-- The core algorithm will populate this div with the generated template HTML -->
+    </div>
+    <script src="webflow_api.js"></script>
+    <script src="core_algorithm.js"></script>
+    <script>
+        // This script will call the core algorithm to generate the template
+        // and then insert the resulting HTML into the template-container div.
+        // It will receive the user input from the popup.js through some means,
+        // for example, via chrome.storage or messaging.
+
+        // Placeholder for user input, in practice this would come from the extension's UI
+        const userInput = {
+            templateType: "blog",
+            colorScheme: ["#FFFFFF", "#000000", "#FF0000"],
+            layoutPreference: "Grid",
+            additionalFeatures: ["contact form", "comment section"]
+        };
+
+        // Function to receive user input and generate the template
+        function generateTemplate(input) {
+            // Call the core algorithm with the user input
+            const generatedHTML = CoreAlgorithm.generate(input);
+
+            // Insert the generated HTML into the template-container
+            document.getElementById('template-container').innerHTML = generatedHTML;
+        }
+
+        // Call the generateTemplate function with the placeholder user input
+        generateTemplate(userInput);
+    </script>
+</body>
+</html>

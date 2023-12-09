@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webflow Template Designer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="popup-container">
+        <div class="popup-header">
+            Webflow Template Designer
+        </div>
+        <form class="popup-form" id="templateForm">
+            <div class="input-group">
+                <label for="templateType" class="input-label">Template Type:</label>
+                <input type="text" id="templateType" class="input-field" placeholder="e.g., blog, e-commerce">
+            </div>
+            <div class="input-group">
+                <label class="input-label">Color Scheme:</label>
+                <div class="flex">
+                    <!-- Dynamically add color swatches based on user input -->
+                </div>
+                <button type="button" id="addColor" class="button">Add Color</button>
+            </div>
+            <div class="input-group">
+                <label for="layoutPreference" class="input-label">Layout Preference:</label>
+                <select id="layoutPreference" class="input-field">
+                    <option value="Grid">Grid</option>
+                    <option value="Freeform">Freeform</option>
+                    <option value="Single column">Single column</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label class="input-label">Additional Features:</label>
+                <div class="flex flex-column" id="additionalFeatures">
+                    <!-- Checkboxes for additional features will be added here -->
+                </div>
+                <button type="button" id="addFeature" class="button">Add Feature</button>
+            </div>
+            <div class="input-group">
+                <button type="submit" class="button">Generate Template</button>
+            </div>
+        </form>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
